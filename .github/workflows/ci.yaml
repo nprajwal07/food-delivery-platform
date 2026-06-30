@@ -11,7 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: just checking 
-        run: echo "Hey prajwal you finally wrote your first github workflow file by yourself!"
+      - name: checkout code 
+        uses: actions/checkout@v4
+      - name: Verifying code
+        run:  ls -R
       - name: seeing changes
-        run: echo "I am seeing changes in you, You will get what you want in future!"
+        run: echo "I have my code"
