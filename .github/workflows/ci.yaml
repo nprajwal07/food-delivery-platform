@@ -1,0 +1,17 @@
+name: Food Delivery CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: just checking 
+        run: echo "Hey prajwal you finally wrote your first github workflow file by yourself!"
+      - name: seeing changes
+        run: echo "I am seeing changes in you, You will get what you want in future!"
