@@ -14,10 +14,10 @@ jobs:
       - name: checkout code 
         uses: actions/checkout@v4
       - name: build backend
-        uses : docker build -t food-delivery-backend:latest ./backend
+        run : docker build -t food-delivery-backend:latest ./backend
       - name: build frontend
-        uses : docker build -t food-delivery-frontend:latest ./frontend
+        run : docker build -t food-delivery-frontend:latest ./frontend
       - name: build admin
-        uses : docker build -t food-delivery-admin:latest ./admin
+        run : docker build -t food-delivery-admin:latest ./admin
       - name: Final message
         run: echo "Build completed successfully!"
