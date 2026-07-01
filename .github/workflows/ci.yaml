@@ -1,8 +1,5 @@
 name: Food Delivery CI
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -22,14 +19,3 @@ jobs:
       - name: Final message
         run: echo "Build completed successfully!"
    
-  publish:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    needs: build 
-    steps: 
-      - name: checkout code
-        uses: actions/checkout@v4
-      - name: publish docker images
-        run: echo "Publishing Docker images to Docker Hub..."
-      - name: Final message
-        run: echo "Docker images published successfully!"
