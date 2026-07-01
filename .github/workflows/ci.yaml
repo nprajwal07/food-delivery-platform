@@ -31,3 +31,5 @@ jobs:
         uses: actions/checkout@v4
       - name: publish docker images
         run: echo "Publishing Docker images to Docker Hub..."
+      - name: Final message
+        run: echo "Docker images published successfully!"
